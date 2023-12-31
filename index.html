@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/styşe.css" />
+
+    <title>To Do App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon"></span>
+            <ion-icon name="finger-print-outline"></ion-icon>
+            <span class="text">Alperen ER</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="https://github.com/alprNer">
+            <span class="icon"></span>
+            <ion-icon name="logo-github"></ion-icon>
+            <span class="text">GitHub</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="https://www.linkedin.com/in/muhammetalperener/">
+            <span class="icon"></span>
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <span class="text">Linked-in</span>
+          </a>
+        </li>
+      </ul>
+      <div class="indicator"></div>
+    </div>
+
+    <script>
+      const list = document.querySelectorAll('.list');
+
+      function activeLink(clickedItem) {
+        list.forEach((item) => item.classList.remove('active'));
+        clickedItem.classList.add('active');
+      }
+
+      list.forEach((item) => {
+        item.addEventListener('click', () => activeLink(item));
+      });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+
+  </body>
+</html>
